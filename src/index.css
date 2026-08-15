@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Light, whitespace-driven app surface. Headspace-inspired warm palette.
+   Colour is a scarce resource here: one orange accent carries the primary
+   action and active state, everything else is warm neutral.
+   --------------------------------------------------------------------------- */
+@theme {
+  /* Surfaces */
+  --color-canvas: #fdf5eb; /* warm off-white page */
+  --color-card: #ffffff;
+  --color-sand: #f7efe4; /* hover / secondary surface */
+  --color-line: #ece0d0; /* the 1px rule, warm not gray */
+  --color-line-soft: #f4ebdf;
+
+  /* Text — warm dark neutral, never pure black */
+  --color-ink: #4b5161;
+  --color-muted: #666c7e; /* AA on canvas */
+  --color-faint: #9aa0ae; /* icons and decoration only, never body copy */
+
+  /* Accent — used sparingly: primary CTA, active nav, live state */
+  --color-accent: #f5793a;
+  --color-accent-deep: #fb6d06;
+  --color-accent-wash: #fdece1;
+
+  /* Supporting calm blue — presence and secondary status */
+  --color-sky: #52b6de;
+  --color-sky-deep: #24759c; /* AA text pairing for the wash */
+  --color-sky-wash: #e7f4fb;
+
+  /* Type roles */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Instrument Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Crisp radii — no pill-shaped containers or cards */
+  --radius-tile: 0.5rem;
+  --radius-card: 0.75rem;
+
+  /* Barely-there elevation. Nothing heavier than this anywhere. */
+  --shadow-card: 0 1px 2px rgb(75 81 97 / 0.04);
+  --shadow-hover: 0 2px 8px rgb(75 81 97 / 0.05);
+
+  --ease-quiet: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* The display face is optically warm at large sizes only. */
+  .font-display {
+    font-variation-settings: "SOFT" 40;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-wash);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}

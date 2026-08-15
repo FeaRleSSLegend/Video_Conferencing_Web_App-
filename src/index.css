@@ -33,6 +33,20 @@
   --color-greige: #e9e4dc;
   --color-shell: #1b1310;
 
+  /* Meeting room only. A deliberate dark exception: call UI reduces glare and
+     keeps attention on the tiles. The accent stays the same orange. */
+  --color-stage: #101114;
+  --color-stage-panel: #17191e;
+  --color-stage-raised: #1f2229;
+  --color-stage-line: #2a2e37;
+  --color-stage-txt: #eceef2;
+  --color-stage-muted: #949aa6;
+  --color-leave: #e04b4b;
+
+  /* One surface for every video tile. Names label the tiles; colour-coding
+     them as well was noise. */
+  --color-tile: #1e2230;
+
   /* Validation — the only red in the system, same washed pastel family */
   --color-danger: #9f2f2d;
   --color-danger-wash: #fdebec;

@@ -150,6 +150,93 @@ export const CheckIcon = (p: SVGProps<SVGSVGElement>) => (
   </Icon>
 )
 
+export const MicIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <rect x="9" y="2.5" width="6" height="11" rx="3" />
+    <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" />
+  </Icon>
+)
+
+export const MicOffIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M15 5.4A3 3 0 0 0 9 5.5v5M9 13.4a3 3 0 0 0 5.2-.9" />
+    <path d="M5.5 11a6.5 6.5 0 0 0 9.8 5.6M18.5 11a6.4 6.4 0 0 1-.5 2.5M12 17.5V21M4 3l16 18" />
+  </Icon>
+)
+
+export const VideoOffIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M15.5 12.6V15a3 3 0 0 1-3 3h-7a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h1.2M11 6h1.5a3 3 0 0 1 3 3v.6" />
+    <path d="m15.5 10.5 5.5-3v9l-4-2.2M3.5 3.5l17 17" />
+  </Icon>
+)
+
+export const ScreenShareIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <rect x="2.5" y="4" width="19" height="13" rx="2.5" />
+    <path d="M8.5 21h7M12 8v5M9.6 10.4 12 8l2.4 2.4" />
+  </Icon>
+)
+
+export const ChatIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M20.5 12a8 8 0 0 1-8 8H4.8l1.6-3.2A8 8 0 1 1 20.5 12z" />
+  </Icon>
+)
+
+export const ArrowLeftIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M19 12H5M11 6l-6 6 6 6" />
+  </Icon>
+)
+
+export const PhoneOffIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M2.5 9.5c5.5-4 13.5-4 19 0v3.2c0 .8-.7 1.4-1.5 1.3l-3-.4a1.4 1.4 0 0 1-1.2-1.3v-1.6a12 12 0 0 0-7.6 0v1.6c0 .7-.5 1.2-1.2 1.3l-3 .4c-.8.1-1.5-.5-1.5-1.3z" />
+  </Icon>
+)
+
+export const SmileIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <circle cx="12" cy="12" r="8.5" />
+    <path d="M9 10h.01M15 10h.01M8.8 14.2a4 4 0 0 0 6.4 0" />
+  </Icon>
+)
+
+export const HandIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M8.5 11V4.8a1.4 1.4 0 0 1 2.8 0V10m0-.4V3.9a1.4 1.4 0 0 1 2.8 0V10m0-.4V5.4a1.4 1.4 0 1 1 2.8 0V14a6.5 6.5 0 0 1-6.5 6.5h-.6a6 6 0 0 1-4.6-2.2L2.9 15a1.5 1.5 0 0 1 2.3-1.9l1.5 1.6" />
+  </Icon>
+)
+
+export const MoreIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <circle cx="5.5" cy="12" r="1.1" fill="currentColor" stroke="none" />
+    <circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none" />
+    <circle cx="18.5" cy="12" r="1.1" fill="currentColor" stroke="none" />
+  </Icon>
+)
+
+export const UserPlusIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <circle cx="10" cy="8" r="3.4" />
+    <path d="M3.5 19.5a6.5 6.5 0 0 1 13 0M18.5 7.5v5M21 10h-5" />
+  </Icon>
+)
+
+export const ShieldIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M12 2.8 4.5 5.9v5.4c0 4.2 3 8.1 7.5 9.4 4.5-1.3 7.5-5.2 7.5-9.4V5.9z" />
+    <path d="M9.5 12.2l1.8 1.8 3.4-3.6" />
+  </Icon>
+)
+
+export const SendIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M20.5 3.5 10 14M20.5 3.5l-6.6 17-3.9-6.5L3.5 10z" />
+  </Icon>
+)
+
 export const EyeIcon = (p: SVGProps<SVGSVGElement>) => (
   <Icon {...p}>
     <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6z" />
@@ -164,8 +251,3 @@ export const EyeOffIcon = (p: SVGProps<SVGSVGElement>) => (
   </Icon>
 )
 
-export const ArrowUpRightIcon = (p: SVGProps<SVGSVGElement>) => (
-  <Icon {...p}>
-    <path d="M7.5 16.5 16.5 7.5M9 7.5h7.5V15" />
-  </Icon>
-)

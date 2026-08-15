@@ -1,22 +1,22 @@
 import { useState } from 'react'
 import type { ReactNode } from 'react'
 import { useNavigate } from 'react-router'
+import {
+  Hand,
+  MessageSquare,
+  Mic,
+  MicOff,
+  MoreHorizontal,
+  PhoneOff,
+  ScreenShare,
+  Settings,
+  ShieldCheck,
+  Users,
+  Video,
+  VideoOff,
+} from 'lucide-react'
 import ReactionsMenu from './ReactionsMenu'
 import type { PanelTab } from './MeetingSidePanel'
-import {
-  ChatIcon,
-  HandIcon,
-  MicIcon,
-  MicOffIcon,
-  MoreIcon,
-  PhoneOffIcon,
-  ScreenShareIcon,
-  SettingsIcon,
-  ShieldIcon,
-  UsersIcon,
-  VideoIcon,
-  VideoOffIcon,
-} from '../shared/icons'
 
 type MeetingControlsProps = {
   micOn: boolean
@@ -38,6 +38,9 @@ const round =
 const on = 'bg-accent/20 text-accent hover:bg-accent/30'
 const off = 'bg-stage-raised text-stage-txt hover:bg-stage-line'
 
+/** One size and stroke for every icon on this page. */
+const ico = { strokeWidth: 1.6, className: 'h-5 w-5' } as const
+
 export default function MeetingControls({
   micOn,
   cameraOn,
@@ -56,9 +59,9 @@ export default function MeetingControls({
   const [moreOpen, setMoreOpen] = useState(false)
 
   const panels: { tab: PanelTab; label: string; icon: ReactNode }[] = [
-    { tab: 'people', label: 'People', icon: <UsersIcon /> },
-    { tab: 'chat', label: 'Chat', icon: <ChatIcon /> },
-    { tab: 'host', label: 'Host controls', icon: <ShieldIcon /> },
+    { tab: 'people', label: 'People', icon: <Users {...ico} /> },
+    { tab: 'chat', label: 'Chat', icon: <MessageSquare {...ico} /> },
+    { tab: 'host', label: 'Host controls', icon: <ShieldCheck {...ico} /> },
   ]
 
   return (
@@ -71,7 +74,7 @@ export default function MeetingControls({
           aria-label={micOn ? 'Mute microphone' : 'Unmute microphone'}
           className={`${round} ${micOn ? on : off}`}
         >
-          {micOn ? <MicIcon /> : <MicOffIcon />}
+          {micOn ? <Mic {...ico} /> : <MicOff {...ico} />}
         </button>
 
         <button
@@ -81,7 +84,7 @@ export default function MeetingControls({
           aria-label={cameraOn ? 'Turn camera off' : 'Turn camera on'}
           className={`${round} ${cameraOn ? on : off}`}
         >
-          {cameraOn ? <VideoIcon /> : <VideoOffIcon />}
+          {cameraOn ? <Video {...ico} /> : <VideoOff {...ico} />}
         </button>
 
         <button
@@ -91,7 +94,7 @@ export default function MeetingControls({
           aria-label={sharing ? 'Stop sharing your screen' : 'Share your screen'}
           className={`${round} ${sharing ? on : off}`}
         >
-          <ScreenShareIcon />
+          <ScreenShare {...ico} />
         </button>
 
         <ReactionsMenu className={`${round} ${off}`} />
@@ -103,7 +106,7 @@ export default function MeetingControls({
           aria-label={handRaised ? 'Lower your hand' : 'Raise your hand'}
           className={`${round} ${handRaised ? on : off}`}
         >
-          <HandIcon />
+          <Hand {...ico} />
         </button>
 
         <div className="relative">
@@ -138,9 +141,9 @@ export default function MeetingControls({
                   type="button"
                   role="menuitem"
                   onClick={() => setMoreOpen(false)}
-                  className="flex w-full items-center gap-3 rounded-tile px-3 py-2.5 text-left text-sm text-stage-txt transition-colors duration-150 ease-quiet hover:bg-stage-raised [&>svg]:h-[1.125rem] [&>svg]:w-[1.125rem] [&>svg]:text-stage-muted"
+                  className="flex w-full items-center gap-3 rounded-tile px-3 py-2.5 text-left text-sm text-stage-txt transition-colors duration-150 ease-quiet hover:bg-stage-raised [&>svg]:text-stage-muted"
                 >
-                  <SettingsIcon />
+                  <Settings {...ico} />
                   Settings
                 </button>
               </div>
@@ -154,7 +157,7 @@ export default function MeetingControls({
             aria-label="More options"
             className={`${round} ${off}`}
           >
-            <MoreIcon />
+            <MoreHorizontal {...ico} />
           </button>
         </div>
 
@@ -163,7 +166,7 @@ export default function MeetingControls({
           onClick={() => navigate(`/meeting/${meetingId}/end`)}
           className="ml-1 flex h-11 items-center gap-2 rounded-full bg-leave px-5 text-sm font-semibold text-white transition-colors duration-150 ease-quiet hover:brightness-110 active:scale-[0.99]"
         >
-          <PhoneOffIcon className="h-[1.125rem] w-[1.125rem]" />
+          <PhoneOff strokeWidth={1.8} className="h-[1.125rem] w-[1.125rem]" />
           Leave
         </button>
       </div>

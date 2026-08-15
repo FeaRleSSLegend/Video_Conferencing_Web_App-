@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { CheckIcon, CopyIcon } from '../shared/icons'
+import { Check, Copy } from 'lucide-react'
 
 type WaitingForOthersProps = {
   roomCode: string
@@ -29,7 +29,11 @@ export default function WaitingForOthers({ roomCode }: WaitingForOthersProps) {
         onClick={copy}
         className="inline-flex h-9 items-center gap-2 rounded-full bg-accent px-4 text-sm font-semibold text-white transition-colors duration-150 ease-quiet hover:bg-accent-deep active:scale-[0.99]"
       >
-        {copied ? <CheckIcon className="h-4 w-4" /> : <CopyIcon className="h-4 w-4" />}
+        {copied ? (
+          <Check strokeWidth={1.8} className="h-4 w-4" />
+        ) : (
+          <Copy strokeWidth={1.8} className="h-4 w-4" />
+        )}
         {copied ? 'Link copied' : 'Copy invite link'}
       </button>
     </div>

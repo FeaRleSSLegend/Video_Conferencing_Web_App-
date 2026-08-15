@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SmileIcon } from '../shared/icons'
+import { Smile } from 'lucide-react'
 import { reactions } from './mockData'
 
 type ReactionsMenuProps = {
@@ -47,7 +47,7 @@ export default function ReactionsMenu({ className }: ReactionsMenuProps) {
         aria-label="Send a reaction"
         className={className}
       >
-        <SmileIcon />
+        <Smile strokeWidth={1.6} className="h-5 w-5" />
       </button>
     </div>
   )

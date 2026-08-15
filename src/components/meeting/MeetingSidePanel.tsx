@@ -1,7 +1,7 @@
 import ChatPanel from './ChatPanel'
 import HostControlsPanel from './HostControlsPanel'
+import { X } from 'lucide-react'
 import ParticipantsPanel from './ParticipantsPanel'
-import { CloseIcon } from '../shared/icons'
 import type { Participant, PendingGuest } from './mockData'
 
 export type PanelTab = 'people' | 'chat' | 'host'
@@ -54,7 +54,7 @@ export default function MeetingSidePanel({
             aria-label="Close panel"
             className="-mr-1.5 flex h-8 w-8 items-center justify-center rounded-tile text-stage-muted transition-colors duration-150 ease-quiet hover:bg-stage-raised hover:text-stage-txt"
           >
-            <CloseIcon className="h-[1.125rem] w-[1.125rem]" />
+            <X strokeWidth={1.6} className="h-[1.125rem] w-[1.125rem]" />
           </button>
         </div>
 

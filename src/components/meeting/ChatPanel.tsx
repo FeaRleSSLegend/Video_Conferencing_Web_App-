@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import { Send } from 'lucide-react'
 import InitialsAvatar from './InitialsAvatar'
-import { SendIcon } from '../shared/icons'
 import { chatMessages } from './mockData'
 
 /** Message list and an input. Nothing else belongs in here. */
@@ -46,7 +46,7 @@ export default function ChatPanel() {
           aria-label="Send"
           className="flex h-10 w-10 shrink-0 items-center justify-center rounded-tile bg-accent text-white transition-colors duration-150 ease-quiet hover:bg-accent-deep disabled:pointer-events-none disabled:opacity-40"
         >
-          <SendIcon className="h-[1.125rem] w-[1.125rem]" />
+          <Send strokeWidth={1.6} className="h-[1.125rem] w-[1.125rem]" />
         </button>
       </form>
     </div>

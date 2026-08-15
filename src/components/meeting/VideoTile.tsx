@@ -1,5 +1,5 @@
+import { MicOff, VideoOff } from 'lucide-react'
 import InitialsAvatar from './InitialsAvatar'
-import { MicOffIcon, VideoOffIcon } from '../shared/icons'
 import type { Participant } from './mockData'
 
 type VideoTileProps = {
@@ -38,10 +38,15 @@ export default function VideoTile({
         </span>
 
         {!participant.micOn && (
-          <MicOffIcon className="h-3.5 w-3.5 shrink-0 text-stage-muted" aria-label="Muted" />
+          <MicOff
+            strokeWidth={1.6}
+            className="h-3.5 w-3.5 shrink-0 text-stage-muted"
+            aria-label="Muted"
+          />
         )}
         {!participant.cameraOn && (
-          <VideoOffIcon
+          <VideoOff
+            strokeWidth={1.6}
             className="h-3.5 w-3.5 shrink-0 text-stage-muted"
             aria-label="Camera off"
           />

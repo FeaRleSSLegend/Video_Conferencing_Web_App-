@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router'
+import { ArrowLeft, Check } from 'lucide-react'
 import InitialsAvatar from './InitialsAvatar'
-import { ArrowLeftIcon, CheckIcon } from '../shared/icons'
 import { meeting, type Participant } from './mockData'
 
 type MeetingHeaderProps = {
@@ -33,7 +33,7 @@ export default function MeetingHeader({ roomCode, people }: MeetingHeaderProps) 
         aria-label="Back to dashboard"
         className="-ml-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-stage-muted transition-colors duration-150 ease-quiet hover:bg-stage-raised hover:text-stage-txt"
       >
-        <ArrowLeftIcon className="h-[1.125rem] w-[1.125rem]" />
+        <ArrowLeft strokeWidth={1.6} className="h-[1.125rem] w-[1.125rem]" />
       </button>
 
       <div className="flex min-w-0 flex-1 items-baseline gap-2.5">
@@ -46,7 +46,7 @@ export default function MeetingHeader({ roomCode, people }: MeetingHeaderProps) 
           title="Copy invite link"
           className="hidden shrink-0 items-center gap-1.5 font-mono text-xs text-stage-muted transition-colors duration-150 ease-quiet hover:text-stage-txt sm:flex"
         >
-          {copied && <CheckIcon className="h-3.5 w-3.5 text-accent" />}
+          {copied && <Check strokeWidth={2} className="h-3.5 w-3.5 text-accent" />}
           {roomCode}
         </button>
       </div>

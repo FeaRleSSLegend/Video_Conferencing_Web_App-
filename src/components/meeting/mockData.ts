@@ -115,6 +115,80 @@ export const pendingGuests: PendingGuest[] = [
   { id: 'g3', name: 'Rui Tanaka', waitingFor: '4 min' },
 ]
 
+/* --- post-meeting summary (/meeting/:id/end) ------------------------------ */
+
+export type Attendee = {
+  id: string
+  name: string
+  role: string
+  joinedAt: string
+  /** Null when they were still in the call when it ended. */
+  leftAt: string | null
+  isHost?: boolean
+}
+
+export const summary = {
+  title: 'Weekly design review',
+  startedAt: '10:02',
+  endedAt: '10:49',
+  durationMinutes: 47,
+  attendees: [
+    {
+      id: 'a1',
+      name: 'Divine Okonkwo',
+      role: 'Product Design Lead',
+      joinedAt: '10:00',
+      leftAt: null,
+      isHost: true,
+    },
+    {
+      id: 'a2',
+      name: 'Amara Chukwu',
+      role: 'Engineering Manager',
+      joinedAt: '10:02',
+      leftAt: null,
+    },
+    {
+      id: 'a3',
+      name: 'Priya Raghunathan',
+      role: 'Head of Research',
+      joinedAt: '10:03',
+      leftAt: '10:28',
+    },
+    {
+      id: 'a4',
+      name: 'Marcus Bello',
+      role: 'Data Engineer',
+      joinedAt: '10:05',
+      leftAt: '10:31',
+    },
+    {
+      id: 'a5',
+      name: 'Tobi Adeyemi',
+      role: 'Frontend Engineer',
+      joinedAt: '10:11',
+      leftAt: null,
+    },
+    {
+      id: 'a6',
+      name: 'Samuel Nwosu',
+      role: 'Backend Engineer',
+      joinedAt: '10:02',
+      leftAt: '10:44',
+    },
+  ] satisfies Attendee[],
+}
+
+/** The date the call happened — today, since there is no backend to ask. */
+export function formatMeetingDate(date = new Date()) {
+  return date.toLocaleDateString(undefined, {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  })
+}
+
 export function initialsFor(name: string) {
   const parts = name.trim().split(/\s+/)
   return (parts[0][0] + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toUpperCase()

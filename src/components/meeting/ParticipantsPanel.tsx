@@ -1,5 +1,5 @@
+import { Mic, MicOff, UserPlus, VideoOff } from 'lucide-react'
 import InitialsAvatar from './InitialsAvatar'
-import { MicIcon, MicOffIcon, UserPlusIcon, VideoOffIcon } from '../shared/icons'
 import type { Participant, PendingGuest } from './mockData'
 
 type ParticipantsPanelProps = {
@@ -28,7 +28,7 @@ export default function ParticipantsPanel({
           type="button"
           className="flex w-full items-center justify-center gap-2 rounded-tile bg-accent/15 py-2.5 text-sm font-medium text-accent transition-colors duration-150 ease-quiet hover:bg-accent/25"
         >
-          <UserPlusIcon className="h-[1.125rem] w-[1.125rem]" />
+          <UserPlus strokeWidth={1.6} className="h-[1.125rem] w-[1.125rem]" />
           Add people
         </button>
       </div>
@@ -104,12 +104,12 @@ export default function ParticipantsPanel({
 
               <span className="flex items-center gap-1.5 text-stage-muted">
                 {!person.cameraOn && (
-                  <VideoOffIcon className="h-4 w-4" aria-label="Camera off" />
+                  <VideoOff strokeWidth={1.6} className="h-4 w-4" aria-label="Camera off" />
                 )}
                 {person.micOn ? (
-                  <MicIcon className="h-4 w-4" aria-label="Unmuted" />
+                  <Mic strokeWidth={1.6} className="h-4 w-4" aria-label="Unmuted" />
                 ) : (
-                  <MicOffIcon className="h-4 w-4" aria-label="Muted" />
+                  <MicOff strokeWidth={1.6} className="h-4 w-4" aria-label="Muted" />
                 )}
               </span>
             </li>

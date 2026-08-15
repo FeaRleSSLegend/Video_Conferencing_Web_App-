@@ -3,7 +3,7 @@ import type { FormEvent } from 'react'
 import { useNavigate } from 'react-router'
 import Button from '../shared/Button'
 import Input from '../shared/Input'
-import { KeyboardIcon } from './icons'
+import { KeyboardIcon } from '../shared/icons'
 
 type JoinMeetingFormProps = {
   /** `bar` is the compact top-bar form; `card` is the stacked mobile version. */

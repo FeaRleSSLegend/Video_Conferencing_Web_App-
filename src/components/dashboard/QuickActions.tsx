@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router'
-import { KeyboardIcon, ScheduleIcon, VideoIcon } from './icons'
+import { KeyboardIcon, ScheduleIcon, VideoIcon } from '../shared/icons'
 import { newMeetingCode } from './mockData'
 
 /**

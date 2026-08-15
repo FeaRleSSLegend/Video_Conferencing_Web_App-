@@ -1,5 +1,5 @@
 import Avatar from '../shared/Avatar'
-import { VideoIcon } from './icons'
+import { VideoIcon } from '../shared/icons'
 import type { Contact } from './mockData'
 
 type ContactCardProps = {

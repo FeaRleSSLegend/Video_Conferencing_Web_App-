@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router'
 import Avatar from '../shared/Avatar'
 import Button from '../shared/Button'
-import { RecordingIcon } from './icons'
+import { RecordingIcon } from '../shared/icons'
 import { formatDuration, formatStartedAt, type Meeting } from './mockData'
 
 type MeetingCardProps = {

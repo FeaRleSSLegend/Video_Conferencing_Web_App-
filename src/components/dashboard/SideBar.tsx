@@ -10,7 +10,7 @@ import {
   SettingsIcon,
   UsersIcon,
   VideoIcon,
-} from './icons'
+} from '../shared/icons'
 
 type SideBarProps = {
   /** Drawer state — only consulted below `lg`. */

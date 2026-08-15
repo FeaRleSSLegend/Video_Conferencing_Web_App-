@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Avatar, { type Presence } from '../shared/Avatar'
-import { ChevronRightIcon } from './icons'
+import { ChevronRightIcon } from '../shared/icons'
 import { currentUser } from './mockData'
 
 const options: { value: Presence; label: string; dot: string }[] = [

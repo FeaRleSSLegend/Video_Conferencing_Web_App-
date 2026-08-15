@@ -1,5 +1,25 @@
+import { Link } from 'react-router'
+import AuthCard from '../components/auth/AuthCard'
+import LoginForm from '../components/auth/LoginForm'
+
 export default function LoginPage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">Login Page</div>
+    <AuthCard
+      title="Welcome back"
+      subtitle="Sign in to start or join a meeting."
+      switchLink={
+        <>
+          Don't have an account?{' '}
+          <Link
+            to="/signup"
+            className="font-medium text-accent transition-colors duration-150 ease-quiet hover:text-accent-deep"
+          >
+            Sign up
+          </Link>
+        </>
+      }
+    >
+      <LoginForm />
+    </AuthCard>
   )
 }

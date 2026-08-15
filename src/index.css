@@ -28,6 +28,15 @@
   --color-sky-deep: #24759c; /* AA text pairing for the wash */
   --color-sky-wash: #e7f4fb;
 
+  /* Auth-only surfaces: a warm greige page behind the card, and the one dark
+     panel in the product. Both stay out of the app proper. */
+  --color-greige: #e9e4dc;
+  --color-shell: #1b1310;
+
+  /* Validation — the only red in the system, same washed pastel family */
+  --color-danger: #9f2f2d;
+  --color-danger-wash: #fdebec;
+
   /* Type roles */
   --font-display: "Fraunces", Georgia, serif;
   --font-sans: "Instrument Sans", system-ui, -apple-system, sans-serif;
@@ -36,6 +45,7 @@
   /* Crisp radii — no pill-shaped containers or cards */
   --radius-tile: 0.5rem;
   --radius-card: 0.75rem;
+  --radius-shell: 1.25rem; /* large floating surfaces only */
 
   /* Barely-there elevation. Nothing heavier than this anywhere. */
   --shadow-card: 0 1px 2px rgb(75 81 97 / 0.04);

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router'
 import ContactCard from './ContactCard'
 import EmptyState from './EmptyState'
-import { SearchIcon } from './icons'
+import { SearchIcon } from '../shared/icons'
 import { contacts, type Contact } from './mockData'
 
 /** Reachable people float to the top — the list is for starting calls, not browsing. */

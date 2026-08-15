@@ -2,7 +2,7 @@ import Avatar from '../shared/Avatar'
 import Logo from '../shared/Logo'
 import CreateMeetingButton from './CreateMeetingButton'
 import JoinMeetingForm from './JoinMeetingForm'
-import { HelpIcon, MenuIcon, SettingsIcon } from './icons'
+import { HelpIcon, MenuIcon, SettingsIcon } from '../shared/icons'
 import { currentUser } from './mockData'
 
 type TopBarProps = {

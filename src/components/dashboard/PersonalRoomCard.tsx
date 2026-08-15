@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router'
 import Button from '../shared/Button'
-import { CheckIcon, CopyIcon } from './icons'
+import { CheckIcon, CopyIcon } from '../shared/icons'
 import { currentUser } from './mockData'
 
 /** The room that is always yours — Zoom's Personal Meeting ID, adapted. */

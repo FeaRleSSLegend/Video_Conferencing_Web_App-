@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router'
 import Button from '../shared/Button'
-import { LinkIcon, PlusIcon, ScheduleIcon, VideoIcon } from './icons'
+import { LinkIcon, PlusIcon, ScheduleIcon, VideoIcon } from '../shared/icons'
 import { newMeetingCode } from './mockData'
 
 export default function CreateMeetingButton({ fullWidth = false }: { fullWidth?: boolean }) {

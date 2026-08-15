@@ -150,6 +150,20 @@ export const CheckIcon = (p: SVGProps<SVGSVGElement>) => (
   </Icon>
 )
 
+export const EyeIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6z" />
+    <circle cx="12" cy="12" r="3" />
+  </Icon>
+)
+
+export const EyeOffIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M9.9 5.2A9.9 9.9 0 0 1 12 5c6.4 0 10 6 10 6a17.6 17.6 0 0 1-3.3 3.9M6.5 6.9C3.6 8.6 2 11 2 11s3.6 6 10 6a9.9 9.9 0 0 0 4-.8" />
+    <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2M4 4l16 16" />
+  </Icon>
+)
+
 export const ArrowUpRightIcon = (p: SVGProps<SVGSVGElement>) => (
   <Icon {...p}>
     <path d="M7.5 16.5 16.5 7.5M9 7.5h7.5V15" />
